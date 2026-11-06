@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nusantara Meal Prep - Promo</title>
+  <meta name="description" content="Paket langganan meal prep mingguan dan bulanan dengan harga hemat.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=JetBrains+Mono:wght@400..700&family=Plus+Jakarta+Sans:wght@400..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/pages/promo.css">
+</head>
+<body data-page="promo">
+  <div id="site-header"></div>
+
+  <main class="page-main">
+    <!-- 1. Hero merah tua -->
+    <section class="promo-hero">
+      <div class="promo-hero__pattern" aria-hidden="true"></div>
+      <div class="container promo-hero__grid">
+        <div>
+          <span class="promo-hero__badge font-mono">
+            <span class="material-symbols-outlined icon-sm" aria-hidden="true">local_offer</span>
+            <span data-i18n="promo.badge"></span>
+          </span>
+          <h1 class="display-title" data-i18n="promo.heroTitle"></h1>
+          <p class="promo-hero__desc" data-i18n="promo.heroDesc"></p>
+          <a class="btn btn--white" href="#pilih-paket">
+            <span data-i18n="promo.heroBtn"></span>
+            <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+          </a>
+        </div>
+        <img class="promo-hero__img" data-img="nasiKuning" alt="Kotak Meal Prep Nusantara Sehat">
+      </div>
+    </section>
+
+    <!-- 2. Pilih paket -->
+    <section class="pricing" id="pilih-paket">
+      <div class="container">
+        <div class="pricing__head">
+          <h2 data-i18n="promo.title"></h2>
+          <p data-i18n="promo.sub"></p>
+        </div>
+        <div class="toggle" role="group">
+          <button class="toggle__option is-active" type="button" data-period="weekly" aria-pressed="true" data-i18n="promo.weekly"></button>
+          <button class="toggle__option" type="button" data-period="monthly" aria-pressed="false" data-i18n="promo.monthly"></button>
+        </div>
+        <div class="pricing__grid" id="plans-grid"></div>
+      </div>
+    </section>
+
+    <!-- 3. FAQ -->
+    <section class="promo-faq">
+      <div class="container promo-faq__grid">
+        <div class="promo-faq__photo"><img data-img="catering" alt="Paket catering Nusantara Meal Prep" loading="lazy"></div>
+        <div>
+          <span class="promo-faq__badge font-mono">
+            <span class="material-symbols-outlined icon-sm" aria-hidden="true">help</span>
+            <span data-i18n="promo.faqBadge"></span>
+          </span>
+          <h2 data-i18n="promo.faqTitle"></h2>
+          <p class="promo-faq__desc" data-i18n="promo.faqDesc"></p>
+          <div class="faq" id="faq-list"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <div id="site-chatbot"></div>
+  <script type="module" src="assets/js/pages/promo.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 12px 28px; border-radius: var(--radius-pill);
+  font-size: 15px; font-weight: 600; text-align: center;
+  transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn--primary { background: var(--merah-tua); color: var(--putih-bersih); box-shadow: 0 4px 14px rgba(149, 46, 23, 0.25); }
+.btn--primary:hover { background: #7c2411; box-shadow: 0 8px 20px rgba(149, 46, 23, 0.3); }
+.btn--bata { background: var(--merah-bata); color: var(--putih-bersih); }
+.btn--bata:hover { background: #9e3822; box-shadow: 0 8px 20px rgba(182, 69, 44, 0.3); }
+.btn--light { background: var(--kertas-nasi); color: var(--merah-bata); font-weight: 700; box-shadow: 0 0 0 4px rgba(182, 69, 44, 0.15); }
+.btn--light:hover { background: var(--putih-bersih); }
+.btn--white { background: var(--putih-bersih); color: var(--merah-tua); font-weight: 700; padding: 16px 36px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18); }
+.btn--outline { border: 1px solid var(--merah-tua); color: var(--merah-tua); }
+.btn--outline:hover { background: rgba(149, 46, 23, 0.06); }
+.btn--ghost-green { border: 1px solid var(--tinta-daun); color: var(--hijau-daun); }
+.btn--ghost-green:hover { background: rgba(69, 102, 75, 0.08); }
+.btn--whatsapp { background: var(--whatsapp); color: var(--putih-bersih); font-size: 16px; font-weight: 700; padding: 16px 36px; box-shadow: 0 0 0 4px rgba(37, 211, 102, 0.25); }
+.btn--whatsapp:hover { background: #20ba59; box-shadow: 0 10px 24px rgba(37, 211, 102, 0.4); }
+.btn--square { border-radius: var(--radius-sm); }
+.btn--block { display: flex; width: 100%; }
+
+/* Tombol bulat (panah carousel, tombol tambah) */
+.btn-circle {
+  width: 40px; height: 40px; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 1px solid var(--abu-netral); background: var(--putih-bersih);
+  transition: all 0.2s ease;
+}
+.btn-circle:hover { background: var(--merah-tua); color: var(--putih-bersih); border-color: var(--merah-tua); }
+.btn-circle--solid { background: var(--merah-bata); color: var(--putih-bersih); border-color: transparent; }

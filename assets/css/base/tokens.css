@@ -1,0 +1,39 @@
+/* Design tokens: warna, font, radius, bayangan, ukuran. Ubah di sini, berlaku di seluruh situs. */
+:root {
+  /* Warna */
+  --kertas-nasi: #F7F5EE;
+  --tinta-daun: #23281F;
+  --abu-netral: #9A9788;
+  --hijau-daun: #45664B;
+  --merah-bata: #B6452C;
+  --merah-tua: #952E17;
+  --merah-menu: #9A3520;
+  --putih-bersih: #FFFFFF;
+  --whatsapp: #25D366;
+  --surface-low: #F1F5E7;
+  --abu-hijau-muda: #E5EADC;
+  --teks-isi: #3F4738;
+  --teks-abu-gelap: #57423D;
+
+  /* Font */
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 12px;
+  --radius-lg: 32px;
+  --radius-xl: 48px;
+  --radius-pill: 999px;
+
+  /* Bayangan */
+  --shadow-soft: 0 16px 36px rgba(35, 40, 31, 0.06);
+  --shadow-card: 0 20px 48px -12px rgba(35, 40, 31, 0.1);
+
+  /* Ukuran */
+  --container: 1280px;
+  --nav-h: 88px;
+  --nav-offset: 24px;
+  --page-top: 136px; /* ruang untuk navbar melayang */
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nusantara Meal Prep - Tentang Kami</title>
+  <meta name="description" content="Cerita, nilai, dan tim di balik Nusantara Meal Prep.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=JetBrains+Mono:wght@400..700&family=Plus+Jakarta+Sans:wght@400..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/pages/about.css">
+</head>
+<body data-page="about">
+  <div id="site-header"></div>
+
+  <main class="page-main">
+    <!-- 1. Judul tengah -->
+    <section class="about-intro">
+      <div class="container">
+        <h1 class="display-title about-intro__title" data-i18n-html="about.title"></h1>
+        <p class="about-intro__text" data-i18n="about.intro"></p>
+      </div>
+    </section>
+
+    <!-- 2. Cerita -->
+    <section class="about-story">
+      <div class="container about-story__grid">
+        <div class="photo-frame" data-reveal><img data-img="aboutKitchen" alt="Dapur keluarga tradisional dan kehangatan warisan memasak Nusantara"></div>
+        <div data-reveal>
+          <h2 data-i18n="about.story.title"></h2>
+          <p data-i18n="about.story.p1"></p>
+          <p data-i18n="about.story.p2"></p>
+          <div class="about-story__pill">
+            <span class="material-symbols-outlined" aria-hidden="true">local_dining</span>
+            <span data-i18n="about.story.pill"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Nilai-nilai (bento) -->
+    <section class="about-values">
+      <div class="container">
+        <div class="about-values__head">
+          <p class="eyebrow" data-i18n="about.values.label"></p>
+          <h2 data-i18n="about.values.title"></h2>
+        </div>
+        <div class="bento">
+          <article class="bento__card bento__card--white" data-reveal>
+            <div class="bento__icon bento__icon--green"><span class="material-symbols-outlined" aria-hidden="true">eco</span></div>
+            <h3 data-i18n="about.v1.title"></h3><p data-i18n="about.v1.desc"></p>
+          </article>
+          <article class="bento__card bento__card--red" data-reveal>
+            <div class="bento__icon bento__icon--light"><span class="material-symbols-outlined" aria-hidden="true">balance</span></div>
+            <h3 data-i18n="about.v2.title"></h3><p data-i18n="about.v2.desc"></p>
+          </article>
+          <article class="bento__card bento__card--sage" data-reveal>
+            <div class="bento__body">
+              <div class="bento__icon bento__icon--red"><span class="material-symbols-outlined" aria-hidden="true">soup_kitchen</span></div>
+              <h3 data-i18n="about.v3.title"></h3><p data-i18n="about.v3.desc"></p>
+            </div>
+            <div class="bento__photo"><img data-img="spices" alt="Koleksi rempah-rempah autentik Nusantara" loading="lazy"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Di balik dapur kami -->
+    <section class="about-kitchen">
+      <div class="container">
+        <div class="about-kitchen__head">
+          <p class="eyebrow" data-i18n="about.kitchen.label"></p>
+          <h2 data-i18n="about.kitchen.title"></h2>
+        </div>
+        <div class="about-kitchen__grid">
+          <div>
+            <h3 data-i18n="about.kitchen.sub"></h3>
+            <p data-i18n="about.kitchen.desc"></p>
+            <ul class="experts">
+              <li class="expert">
+                <div class="expert__avatar"><span class="material-symbols-outlined" aria-hidden="true">medical_services</span></div>
+                <div><h4>Dr. Maya Lestari</h4><p data-i18n="about.expert1.role"></p></div>
+              </li>
+              <li class="expert">
+                <div class="expert__avatar"><span class="material-symbols-outlined" aria-hidden="true">restaurant</span></div>
+                <div><h4>Chef Budi Santoso</h4><p data-i18n="about.expert2.role"></p></div>
+              </li>
+            </ul>
+          </div>
+          <div class="photo-frame" data-reveal>
+            <img data-img="chefs" alt="Chef Budi Santoso dan Dr. Maya Lestari berkolaborasi meracik meal prep bernutrisi seimbang" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <div id="site-chatbot"></div>
+  <script type="module" src="assets/js/pages/about.js"></script>
+</body>
+</html>

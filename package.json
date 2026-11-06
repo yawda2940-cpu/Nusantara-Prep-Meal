@@ -1,0 +1,11 @@
+{
+  "name": "nusantara-meal-prep",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Website Nusantara Meal Prep (HTML, CSS, JavaScript tanpa framework dan tanpa build)",
+  "scripts": {
+    "dev": "npx serve .",
+    "dev:api": "npx vercel dev"
+  }
+}

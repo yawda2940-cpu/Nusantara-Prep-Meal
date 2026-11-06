@@ -1,0 +1,36 @@
+.navbar {
+  position: fixed; top: var(--nav-offset); left: 0; right: 0; z-index: 1000;
+  display: flex; justify-content: center; pointer-events: none;
+}
+.navbar__capsule {
+  pointer-events: auto; position: relative;
+  width: 90%; max-width: var(--container); height: var(--nav-h);
+  display: flex; align-items: center; justify-content: space-between; padding: 0 32px;
+  background: rgba(247, 245, 238, 0.92);
+  -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
+  border: 1px solid rgba(154, 151, 136, 0.25); border-radius: var(--radius-pill);
+  box-shadow: 0 16px 36px rgba(35, 40, 31, 0.1);
+}
+.navbar__logo img { height: 48px; width: auto; }
+.navbar__links { display: flex; align-items: center; gap: 32px; }
+.navbar__link { position: relative; padding: 6px 0; font-size: 15px; font-weight: 500; transition: color 0.2s; }
+.navbar__link:hover { color: var(--merah-tua); }
+.navbar__link.is-active { color: var(--merah-bata); font-weight: 700; border-bottom: 2px solid var(--merah-bata); }
+.navbar__actions { display: flex; align-items: center; gap: 16px; }
+.navbar__toggle { display: none; width: 44px; height: 44px; border-radius: 50%; align-items: center; justify-content: center; }
+
+.lang-switcher { display: flex; gap: 2px; padding: 4px; border-radius: var(--radius-pill); background: rgba(35, 40, 31, 0.06); }
+.lang-btn { padding: 6px 14px; border-radius: var(--radius-pill); font-size: 12px; font-weight: 700; transition: all 0.2s; }
+.lang-btn.is-active { background: var(--merah-tua); color: var(--putih-bersih); }
+
+@media (max-width: 960px) {
+  .navbar__capsule { padding: 0 20px; }
+  .navbar__cta { display: none; }
+  .navbar__toggle { display: inline-flex; }
+  .navbar__links {
+    display: none; position: absolute; top: calc(100% + 12px); left: 0; right: 0;
+    flex-direction: column; align-items: flex-start; gap: 18px; padding: 24px 28px;
+    background: var(--kertas-nasi); border-radius: 24px; box-shadow: 0 16px 36px rgba(35, 40, 31, 0.14);
+  }
+  .navbar__capsule.is-open .navbar__links { display: flex; }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nusantara Meal Prep - Menu</title>
+  <meta name="description" content="Menu meal prep Nusantara: makanan utama, minuman sehat, dan pencuci mulut dengan kalori terukur.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=JetBrains+Mono:wght@400..700&family=Plus+Jakarta+Sans:wght@400..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/pages/menu.css">
+</head>
+<body data-page="menu">
+  <div id="site-header"></div>
+
+  <main class="page-main">
+    <!-- 1. Hero -->
+    <section class="menu-hero">
+      <div class="container menu-hero__grid">
+        <div>
+          <h1 class="display-title menu-hero__title" data-i18n-html="menu.heroTitle"></h1>
+          <p class="menu-hero__desc" data-i18n="menu.heroDesc"></p>
+          <div class="menu-hero__buttons">
+            <a class="btn btn--primary btn--square" href="promo.html">
+              <span data-i18n="menu.heroBtn1"></span>
+              <span class="material-symbols-outlined icon-sm" aria-hidden="true">arrow_forward</span>
+            </a>
+            <a class="btn btn--ghost-green btn--square" href="contact.html#kirim-pesan">
+              <span class="material-symbols-outlined icon-sm" aria-hidden="true">health_and_safety</span>
+              <span data-i18n="menu.heroBtn2"></span>
+            </a>
+          </div>
+        </div>
+        <div class="menu-hero__visual" id="menu-hero-cards"></div>
+      </div>
+    </section>
+
+    <!-- 2. Menu andalan: tiga carousel -->
+    <section class="menu-list">
+      <div class="container">
+        <div class="menu-list__intro">
+          <h2 data-i18n="menu.title"></h2>
+          <p data-i18n="menu.desc"></p>
+        </div>
+        <div id="menu-categories"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <div id="site-chatbot"></div>
+  <script type="module" src="assets/js/pages/menu.js"></script>
+</body>
+</html>
