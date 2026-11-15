@@ -6,10 +6,25 @@ import { initCarousels } from './components/carousel.js';
 import { initChatbot } from './components/chatbot.js';
 import { renderFooter } from './components/footer.js';
 import { renderNavbar } from './components/navbar.js';
-import { IMAGES } from './data/images.js';
+import { FALLBACK_IMAGE, IMAGES } from './data/images.js';
 import { applyTranslations, loadLang } from './i18n/i18n.js';
 import { initParallax } from './utils/parallax.js';
 import { initReveal } from './utils/reveal.js';
+
+/** Jika gambar gagal dimuat, ganti dengan gambar cadangan agar tidak muncul ikon rusak. */
+function installImageFallback() {
+  document.addEventListener(
+    'error',
+    (e) => {
+      const img = e.target;
+      if (img instanceof HTMLImageElement && img.src !== FALLBACK_IMAGE && !img.dataset.fallback) {
+        img.dataset.fallback = '1';
+        img.src = FALLBACK_IMAGE;
+      }
+    },
+    true
+  );
+}
 
 /** Mengisi src gambar statis dari data/images.js: <img data-img="nasiKuning">. */
 function applyImages() {
@@ -21,6 +36,7 @@ function applyImages() {
 
 export function bootstrap(renderPage = () => {}) {
   loadLang();
+  installImageFallback();
   applyImages();
 
   renderNavbar(document.getElementById('site-header'));

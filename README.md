@@ -17,7 +17,7 @@ Situs statis multi-halaman (HTML, CSS, JavaScript biasa, tanpa framework dan tan
 - Warna, font, radius: `assets/css/base/tokens.css`.
 - Teks (ID/EN): `assets/js/i18n/locales/`. Kunci yang belum ada di `en.js` otomatis memakai teks Indonesia.
 - Menu, paket, FAQ, testimoni: `assets/js/data/`.
-- Gambar: `assets/js/data/images.js` (untuk produksi, unduh ke `assets/images/`).
+- Gambar: file lokal di `assets/images/`, dipetakan di `assets/js/data/images.js`. Ganti dengan foto asli dengan menimpa file (atau ubah nama file di `images.js`). Jangan hotlink ke URL pihak ketiga (mis. googleusercontent) karena bisa kedaluwarsa.
 
 ## Publikasi
 Deploy ke Vercel (HTTPS). Tidak ada langkah build. Isi `GEMINI_API_KEY` di Environment Variables.
