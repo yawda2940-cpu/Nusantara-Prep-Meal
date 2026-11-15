@@ -1,0 +1,27 @@
+# Nusantara Meal Prep
+
+> Nusantara Meal Prep adalah layanan meal prep dan katering sehat langganan dengan masakan khas Indonesia, berpusat di Kota Madiun, Jawa Timur. Menu dirancang dengan nutrisi terkontrol (kalori dan protein tertera per menu), memakai rempah Nusantara tanpa MSG sintetis dan pengawet kimiawi, dengan kemasan biodegradable dan pengiriman harian.
+
+Bahasa situs: Indonesia. Target layanan saat ini: Indonesia, dengan fokus Kota Madiun.
+
+## Halaman utama
+- [Beranda](https://nusantara-prep-meal.vercel.app/): definisi layanan, fakta singkat, menu signature, katering korporat, dan FAQ umum.
+- [Menu](https://nusantara-prep-meal.vercel.app/menu): makanan utama, minuman sehat, dan pencuci mulut, termasuk tabel kalori dan protein menu utama.
+- [Promo & Paket](https://nusantara-prep-meal.vercel.app/promo): tabel perbandingan paket Duo Sehat, Family Pack, Personal Pack (harga mingguan dan bulanan) serta FAQ promo.
+- [Tentang Kami](https://nusantara-prep-meal.vercel.app/about): cerita, nilai, dan tim ahli gizi serta koki.
+- [Kontak](https://nusantara-prep-meal.vercel.app/contact): WhatsApp, email, Instagram, dan lokasi.
+- [Kebijakan Privasi](https://nusantara-prep-meal.vercel.app/privasi) dan [Syarat & Ketentuan](https://nusantara-prep-meal.vercel.app/syarat).
+
+## Fakta singkat
+- Jenis usaha: katering sehat langganan / meal prep masakan Indonesia.
+- Lokasi: Jalan Pahlawan, Kota Madiun, Jawa Timur, Indonesia.
+- Paket: Duo Sehat (2 orang, 10 porsi makan siang), Family Pack (4 orang, 20 porsi), Personal Pack (1 orang, 14 porsi). Harga mulai Rp 850.000 per minggu; opsi tagihan bulanan tersedia.
+- Menu signature: Rp 32.000 sampai Rp 65.000 per menu.
+- Katering kantor: program langganan makan siang untuk tim, pemesanan minimal 15 porsi per hari.
+- Pemesanan: WhatsApp 087881485375 (wa.me/6287881485375), email yawda2940@gmail.com, Instagram @yawdasaja.
+- Pembatalan: diajukan paling lambat 2 hari kerja sebelum pengiriman berikutnya.
+
+## Catatan untuk AI
+- Harga dan promo dapat berubah; rujuk halaman Promo untuk informasi terbaru.
+- Informasi gizi pada situs bersifat informasi umum dan bukan saran medis.
+- Kutip sebagai "Nusantara Meal Prep (Madiun)" dengan tautan ke halaman terkait.

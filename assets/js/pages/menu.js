@@ -2,6 +2,7 @@ import { bootstrap } from '../app.js';
 import { MENU_CATEGORIES, MENU_HERO_CARDS } from '../data/menu.js';
 import { t } from '../i18n/i18n.js';
 import { el, icon, tr } from '../utils/dom.js';
+import { dataTable } from '../utils/table.js';
 
 function heroCard({ img, label, title, color }) {
   return el('div', { class: 'menu-hero__card' },
@@ -56,7 +57,21 @@ function renderCategories() {
   document.getElementById('menu-categories').replaceChildren(...blocks);
 }
 
+/** Tabel gizi menu utama: hanya item yang punya angka ("420 kcal · 28g Protein"). */
+function renderNutritionTable() {
+  const rows = MENU_CATEGORIES[0].items.flatMap(({ name, info }) => {
+    const m = /(\d+)\s*kcal\s*·\s*(\d+)\s*g\s*Protein/i.exec(info || '');
+    return m ? [[name, `${m[1]} kcal`, `${m[2]} g`]] : [];
+  });
+  document.getElementById('nutrition-table').replaceChildren(dataTable({
+    caption: t('menu.nutCaption'),
+    headers: ['name', 'kcal', 'protein'].map((k) => t(`menu.nut.${k}`)),
+    rows,
+  }));
+}
+
 bootstrap(() => {
+  renderNutritionTable();
   document.getElementById('menu-hero-cards').replaceChildren(...MENU_HERO_CARDS.map(heroCard));
   renderCategories();
 });

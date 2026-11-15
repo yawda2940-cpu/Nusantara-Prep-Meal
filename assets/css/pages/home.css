@@ -89,3 +89,18 @@
   .final-cta__card { padding: 48px 24px; }
   .final-cta__card h2 { font-size: 30px; }
 }
+
+/* ===== Jawaban singkat (GEO) dan FAQ umum ===== */
+.geo-answer { padding: 24px 0 72px; }
+.geo-answer__inner { display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: start; }
+.geo-answer h2 { margin-bottom: 16px; color: var(--merah-tua); }
+.geo-answer h3 { margin: 28px 0 8px; font-size: 20px; font-weight: 600; color: var(--merah-tua); }
+.geo-answer p { line-height: 1.7; color: var(--teks-isi); }
+.geo-answer__lead { font-size: 18px; }
+.geo-answer__facts { padding: 28px; background: var(--putih-bersih); border: 1px solid rgba(154, 151, 136, 0.2); border-radius: var(--radius-md); box-shadow: var(--shadow-soft); }
+.geo-answer__facts h3 { margin: 0 0 14px; }
+.geo-answer__facts .table-wrap { border: 0; border-radius: 0; }
+.home-faq { padding: 24px 0 72px; }
+.home-faq__inner { max-width: 860px; }
+@media (max-width: 900px) { .geo-answer__inner { grid-template-columns: 1fr; gap: 32px; } }
+

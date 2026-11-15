@@ -1,0 +1,44 @@
+# robots.txt - Nusantara Meal Prep
+# Mesin pencari dan crawler AI yang sah diizinkan; hanya endpoint API yang ditutup.
+
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Crawler AI (pencarian dan kutipan)
+User-agent: GPTBot
+Allow: /
+Disallow: /api/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /api/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /api/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /api/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /api/
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /api/
+
+User-agent: Claude-User
+Allow: /
+Disallow: /api/
+
+# Token kontrol (bukan crawler terpisah): izinkan Gemini/Apple Intelligence memakai konten
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://nusantara-prep-meal.vercel.app/sitemap.xml

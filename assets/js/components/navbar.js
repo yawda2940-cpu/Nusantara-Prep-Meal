@@ -3,11 +3,11 @@ import { getLang, setLang } from '../i18n/i18n.js';
 import { el, tr } from '../utils/dom.js';
 
 const LINKS = [
-  { page: 'home', href: 'index.html', key: 'nav.home' },
-  { page: 'about', href: 'about.html', key: 'nav.about' },
-  { page: 'menu', href: 'menu.html', key: 'nav.menu' },
-  { page: 'promo', href: 'promo.html', key: 'nav.promo' },
-  { page: 'contact', href: 'contact.html', key: 'nav.contact' },
+  { page: 'home', href: '/', key: 'nav.home' },
+  { page: 'about', href: '/about', key: 'nav.about' },
+  { page: 'menu', href: '/menu', key: 'nav.menu' },
+  { page: 'promo', href: '/promo', key: 'nav.promo' },
+  { page: 'contact', href: '/contact', key: 'nav.contact' },
 ];
 
 /** Menyuntikkan navbar kapsul melayang ke #site-header. */
@@ -43,11 +43,11 @@ export function renderNavbar(container) {
   }, el('span', { class: 'material-symbols-outlined', 'aria-hidden': 'true', text: 'menu' }));
 
   const nav = el('nav', { class: 'navbar__capsule', 'data-i18n-aria': 'nav.main' },
-    el('a', { class: 'navbar__logo', href: 'index.html' }, el('img', { src: IMAGES.logo, alt: 'Nusantara Meal Prep' })),
+    el('a', { class: 'navbar__logo', href: '/' }, el('img', { src: IMAGES.logo, alt: 'Nusantara Meal Prep' })),
     links,
     el('div', { class: 'navbar__actions' },
       el('div', { class: 'lang-switcher' }, langButtons),
-      tr('nav.order', 'a', { class: 'btn btn--primary navbar__cta', href: 'contact.html#kirim-pesan' }),
+      tr('nav.order', 'a', { class: 'btn btn--primary navbar__cta', href: '/contact#kirim-pesan' }),
       toggle
     )
   );

@@ -1,9 +1,14 @@
 import { bootstrap } from '../app.js';
+import { renderFaq } from '../components/faq.js';
 import { CLIENTS } from '../data/clients.js';
+import { HOME_FAQ_ITEMS } from '../data/faq.js';
+import { siteFacts } from '../data/facts.js';
 import { SIGNATURE_MENU } from '../data/menu.js';
 import { TESTIMONIAL_COLUMNS } from '../data/testimonials.js';
 import { t } from '../i18n/i18n.js';
 import { el, icon } from '../utils/dom.js';
+import { fillVars } from '../utils/format.js';
+import { dataTable } from '../utils/table.js';
 import { openWhatsApp } from '../utils/whatsapp.js';
 
 /** Bar kepercayaan: marquee logo (daftar digandakan agar loop mulus). */
@@ -64,8 +69,17 @@ function renderTestimonials() {
   document.getElementById('testi-grid').replaceChildren(...columns);
 }
 
+/** Tabel "Fakta Singkat": jawaban ringkas yang mudah dikutip. Nilainya dari siteFacts() (data situs). */
+function renderFacts() {
+  const vars = siteFacts();
+  const rows = ['service', 'location', 'plans', 'menu', 'order', 'corp', 'nutri'].map((k) => [t(`geo.f.${k}`), fillVars(t(`geo.v.${k}`), vars)]);
+  document.getElementById('geo-facts').replaceChildren(dataTable({ caption: t('geo.factsTitle'), rows, className: 'data-table--facts' }));
+}
+
 bootstrap(() => {
   renderTrust();
+  renderFacts();
+  renderFaq(document.getElementById('faq-home'), HOME_FAQ_ITEMS);
   renderSignature();
   renderTestimonials();
 });

@@ -6,6 +6,10 @@
   "description": "Website Nusantara Meal Prep (HTML, CSS, JavaScript tanpa framework dan tanpa build)",
   "scripts": {
     "dev": "npx serve .",
-    "dev:api": "npx vercel dev"
+    "dev:api": "npx vercel dev",
+    "seo:build": "node scripts/prerender.mjs",
+    "seo:check": "node scripts/prerender.mjs --check",
+    "seo:nap": "node scripts/check-nap.mjs",
+    "seo:verify": "node scripts/prerender.mjs --check && node scripts/check-nap.mjs"
   }
 }

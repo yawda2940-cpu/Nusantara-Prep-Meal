@@ -5,7 +5,7 @@ import { waLink } from '../utils/whatsapp.js';
 
 const column = (titleKey, items) =>
   el('div', { class: 'footer__col' },
-    tr(titleKey, 'h4', { class: 'footer__heading' }),
+    tr(titleKey, 'h3', { class: 'footer__heading' }),
     el('ul', { class: 'footer__links' }, items.map(([key, href]) => el('li', {}, tr(key, 'a', { href }))))
   );
 
@@ -19,13 +19,13 @@ export function renderFooter(container) {
     el('div', { class: 'container' },
       el('div', { class: 'footer__grid' },
         el('div', { class: 'footer__brand' },
-          el('a', { href: 'index.html' }, el('img', { class: 'footer__logo', src: IMAGES.logo, alt: SITE.name, loading: 'lazy' })),
+          el('a', { href: '/' }, el('img', { class: 'footer__logo', src: IMAGES.logo, alt: SITE.name, loading: 'lazy' })),
           tr('footer.desc', 'p')
         ),
-        column('footer.navTitle', [['nav.home', 'index.html'], ['nav.about', 'about.html'], ['nav.menu', 'menu.html'], ['nav.promo', 'promo.html']]),
-        column('footer.supportTitle', [['nav.contact', 'contact.html'], ['footer.privacy', '#'], ['footer.terms', '#']]),
+        column('footer.navTitle', [['nav.home', '/'], ['nav.about', '/about'], ['nav.menu', '/menu'], ['nav.promo', '/promo']]),
+        column('footer.supportTitle', [['nav.contact', '/contact'], ['footer.privacy', '/privasi'], ['footer.terms', '/syarat']]),
         el('div', { class: 'footer__col' },
-          tr('footer.contactTitle', 'h4', { class: 'footer__heading' }),
+          tr('footer.contactTitle', 'h3', { class: 'footer__heading' }),
           el('ul', { class: 'footer__links' },
             contactItem('mail', el('a', { href: `mailto:${SITE.email}`, text: SITE.email })),
             contactItem('call', el('a', { href: waLink(), target: '_blank', rel: 'noopener', text: SITE.phoneDisplay })),

@@ -4,6 +4,7 @@ import { FAQ_ITEMS } from '../data/faq.js';
 import { PLANS } from '../data/plans.js';
 import { t } from '../i18n/i18n.js';
 import { el, icon } from '../utils/dom.js';
+import { dataTable } from '../utils/table.js';
 import { openWhatsApp } from '../utils/whatsapp.js';
 
 let period = 'weekly'; // 'weekly' | 'monthly'
@@ -45,7 +46,17 @@ document.querySelectorAll('[data-period]').forEach((btn) =>
   })
 );
 
+/** Tabel perbandingan paket (kedua periode harga tampil, tidak bergantung pada toggle). */
+function renderPlanTable() {
+  document.getElementById('plans-table').replaceChildren(dataTable({
+    caption: t('promo.cmpCaption'),
+    headers: ['plan', 'target', 'weekly', 'monthly', 'benefit'].map((k) => t(`promo.cmp.${k}`)),
+    rows: PLANS.map((p) => [p.name, p.target, p.price.weekly, p.price.monthly, p.features.join('; ')]),
+  }));
+}
+
 bootstrap(() => {
   renderPlans();
+  renderPlanTable();
   renderFaq(document.getElementById('faq-list'), FAQ_ITEMS);
 });

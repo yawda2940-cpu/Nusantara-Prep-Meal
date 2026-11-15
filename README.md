@@ -21,3 +21,18 @@ Situs statis multi-halaman (HTML, CSS, JavaScript biasa, tanpa framework dan tan
 
 ## Publikasi
 Deploy ke Vercel (HTTPS). Tidak ada langkah build. Isi `GEMINI_API_KEY` di Environment Variables.
+
+## SEO & pra-render
+HTML dipra-render supaya konten terbaca crawler tanpa JavaScript (penting untuk Google dan AI search).
+- Setelah mengubah `assets/js/i18n/locales/`, `assets/js/data/`, komponen, atau CSS bersama, jalankan `npm run seo:build` lalu commit hasilnya.
+- `npm run seo:check` memastikan HTML sudah sinkron (gagal jika belum). Cocok dipakai di CI.
+- Skrip: `scripts/prerender.mjs` (menjalankan kode render JS yang sama di Node) dan `scripts/dom-shim.mjs` (DOM mini). Tidak ada dependensi.
+- Bagian di antara `<!--pr:start-->` dan `<!--pr:end-->` serta `<!--css:start-->` dan `<!--css:end-->` dibuat otomatis; jangan diedit manual.
+- Domain produksi (canonical, sitemap, OG) ada di tag `<head>` tiap halaman, `sitemap.xml`, dan `robots.txt`.
+- JSON-LD (FoodEstablishment, WebSite, BreadcrumbList, Menu, Product/Offer, FAQPage) dibangun oleh `scripts/jsonld.mjs` dari data situs yang sama dan ditanam otomatis antara `<!--ld:start-->` dan `<!--ld:end-->`. Review/rating sengaja tidak dimasukkan.
+
+## Dokumen SEO/GEO
+- `docs/SEO-HANDOFF.md`: ringkasan, data yang perlu dilengkapi, urutan setelah deploy
+- `docs/google-business-profile.md`: panduan Google Business Profile dan NAP baku
+- `docs/geo-test-prompts.md`: prompt dan rubrik uji GEO di berbagai LLM
+- Skrip: `npm run seo:build`, `npm run seo:check`, `npm run seo:nap`, `npm run seo:verify`
